@@ -65,6 +65,56 @@
             </div>
         </div>
     </header>
+    <!-- main content start here  -->
+    <main class="bg-[#F0FDF4]">
+        <!-- Loader (DaisyUI) -->
+        <div id="loader" class="flex justify-center items-center py-10 hidden">
+            <span class="loading loading-ring loading-xl text-green-600"></span>
+        </div>
+        <section class="w-11/12 mx-auto">
+            <h1 class="text-2xl font-semibold text-center p-10">Choose Your Trees</h1>
+            <div class="grid lg:grid-cols-12 grid-cols-1 gap-4">
+                <div class="lg:col-span-2 ">
+                    <h3 class="font-bold text-center ">Categories</h3>
+                    <div id="categories" class="flex flex-col items-center add-to-cart-btn"></div>
+                </div>
+
+                <!-- All tree available here :) -->
+                <div id="cards-container" class="lg:col-span-8">
+                    <div id="cards-data" class="card grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2  gap-5">
+                    </div>
+                </div>
+
+                <!-- price section  -->
+                <div class="lg:col-span-2 bg-white p-5">
+                    <h1 class="text-xl font-semibold">Your Cart</h1>
+                    <div id="prices" class="mt-5 border-b-2"></div>
+                    <div class="text-end mt-2">
+                        <span class="font-semibold">Total: </span> <span id="total-price" class="font-bold">0</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- popUp model box -->
+        <dialog id="plantbox" class="modal modal-bottom lg:modal-middle">
+            <div class="lg:w-96 w-70 mx-auto p-0 modal-box overflow-hidden ">
+                <div class="card bg-base-100 shadow-sm">
+                    <h1 class="font-bold text-center p-4" id="modal-title">Plant Name</h1>
+                    <figure class="h-50 w-full px-2 py-2 flex justify-center">
+                        <img id="modal-image" src="" class="rounded-xl object-contain h-full w-full max-h-60" />
+                    </figure>
+                    <div class="card-body items-start text-left">
+                        <h2 class="card-title" id="modal-category">Category: Category Name</h2>
+                        <p id="modal-price" class="text-lg font-semibold text-green-600">Price: ৳0</p>
+                        <p id="modal-description">Description</p>
+                        <div class="card-actions pt-5">
+                            <button class="btn btn-neutral text-white" onclick="closeModal()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+    </main>
 </body>
 
 </html>
